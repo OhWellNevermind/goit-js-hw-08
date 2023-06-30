@@ -10,8 +10,10 @@ function saveFormText(event) {
     const {
       elements: { email, message },
     } = event.currentTarget;
+
     let formData = { email: email.value, message: message.value };
     localStorage.setItem('feedback-form-state', JSON.stringify(formData));
+
     console.log(localStorage.getItem('feedback-form-state'));
   } catch (error) {
     return;
@@ -36,7 +38,7 @@ function setFormText() {
 
 function handleSubmit(event) {
   event.preventDefault();
-  localStorage.clear();
+  localStorage.removeItem('feedback-form-state');
 
   const {
     elements: { email, message },
