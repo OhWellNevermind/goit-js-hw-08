@@ -53,5 +53,7 @@ function handleSubmit(event) {
     message: message.value,
   };
 
+  console.log(formData);
+
   event.currentTarget.reset();
 }
