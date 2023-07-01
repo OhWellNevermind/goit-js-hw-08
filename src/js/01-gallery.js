@@ -4,7 +4,7 @@ import { galleryItems } from './gallery-items.js';
 
 const gallery = document.querySelector('.gallery');
 
-const galleryPhotos = [...galleryItems].reduce((acc, currentValue) => {
+const galleryPhotos = galleryItems.reduce((acc, currentValue) => {
   return (
     acc +
     `<li class="gallery__item"><a class="gallery__link" href="${currentValue.original}">
